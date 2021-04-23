@@ -23,7 +23,12 @@ public class Test {
     public static void printMap(int[][] maps){
         for (int i = 0; i < maps.length; i++){
             for (int j = 0; j < maps[i].length; j++){
-                System.out.print(maps[i][j] + " ");
+                String m = maps[i][j] + " ";
+                System.out.print(
+                        m.replace("2", "+")
+                        .replace("1", "#")
+                        .replace("0", ".")
+                );
             }
             System.out.println();
         }
